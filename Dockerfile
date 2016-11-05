@@ -21,3 +21,11 @@ RUN apt-get install -y zsh && wget https://github.com/robbyrussell/oh-my-zsh/raw
 # Install go
 RUN wget https://storage.googleapis.com/golang/go1.7.3.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.7.3.linux-amd64.tar.gz
 ENV PATH $PATH:/usr/local/go/bin
+
+RUN echo "alias ls='ls --color=auto'" >> ~/.zshrc
+RUN echo "alias grep='grep --color=auto'" >> ~/.zshrc
+RUN echo "alias fgrep='fgrep --color=auto'" >> ~/.zshrc
+RUN echo "alias egrep='egrep --color=auto'" >> ~/.zshrc
+RUN echo "alias ll='ls -alF'" >> ~/.zshrc
+RUN echo "alias la='ls -A'" >> ~/.zshrc
+RUN echo "alias l='ls -CF'" >> ~/.zshrc
